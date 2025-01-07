@@ -1,0 +1,109 @@
+:root{
+    --text: #dbdcff;
+    --background: #111231;
+    --primary: #50213e;
+    --secondary: #9c0230;
+    --accent: #fb5c18;
+  }
+@font-face{
+    font-family: "Inter";
+    src: url("./RammettoOne.ttf");
+}
+
+
+  
+.jemopic{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+.there{
+    color: var(--accent);
+    font-family: Inter;
+}
+.hello{
+    color: var(--secondary);
+    font-family: Inter;
+}
+.details{
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: row;
+    color: var(--text);
+    width: 1000px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: var(--text) 10px 10px 100px 10px;
+    animation: box 5s ease-in-out infinite;
+}
+@keyframes box {
+    0%{
+        box-shadow: 10px 10px 100px 10px var(--text);
+    }
+    25%{
+        box-shadow: 10px 10px 100px 10px var(--primary);
+    }
+    50%{
+        box-shadow: 10px 10px 100px 10px var(--accent);
+    }
+    75%{
+        box-shadow: 10px 10px 100px 10px var(--primary);
+    }
+    100%{
+        box-shadow: 10px 10px 100px 10px var(--text);
+    }
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-evenly;
+
+}
+.content{
+    padding: 50px;
+
+}
+.bio{
+    padding: 5px;
+    display: flex;
+    justify-content: left;
+    color: var(--text); 
+    text-align: left;
+}
+@media only screen and (max-width: 800px){
+    .details{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        width: 300px;
+        align-items: center;
+    }
+    .jemopic{
+        width: 200px;
+        height: 200px;
+    }
+    .hello,.there{
+        font-size: 20px;
+    }
+  
+
+}
+@media screen and (min-width: 900px) and (max-width: 1440px) {
+    .details{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        width: 500px;
+        align-items: center;
+    }
+    .jemopic{
+        width: 300px;
+        height: 300px;
+    }
+    .hello,.there{
+        font-size: 20px;
+    }
+}

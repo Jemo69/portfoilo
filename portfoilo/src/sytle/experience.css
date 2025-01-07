@@ -1,0 +1,51 @@
+:root{
+  --text: #dbdcff;
+  --background: #111231;
+  --primary: #50213e;
+  --secondary: #9c0230;
+  --accent: #fb5c18;
+}
+.lang, .jemo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+.socialstext {
+  color: var(--accent);
+}
+.experience {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--text);
+  padding: 150px;
+}
+@media screen and (max-width: 900px) {
+  .lang, .jemo {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .socialstext {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1440px) {
+  .lang, .jemo {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .socialstext {
+    font-size: 14px;
+  }
+}

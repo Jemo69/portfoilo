@@ -1,0 +1,44 @@
+:root{
+    --text: #dbdcff;
+    --background: #111231;
+    --primary: #50213e;
+    --secondary: #9c0230;
+    --accent: #fb5c18;
+  }
+.titlediv{
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(179deg,var(--secondary),var(--background));
+    animation: gradient-animation 9s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.title{
+  transform: translate(-50%, -50%)  rotate(340deg);
+  color: var(--background);
+
+}
+.port{
+  transform: translate(10%, -50%)  ;
+  color: var(--accent);
+}
+@media only screen and (max-width: 800px) {
+  .title{
+    transform: translate(-40%, -50%)  rotate(340deg);
+  }
+  .port{
+    transform: translate(10%, -50%)  ;
+  }
+}
