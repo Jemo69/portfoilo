@@ -2,6 +2,39 @@
   max-width: 100dvw;
   text-align: center;
 }
+.scrollable-container {
+  width: 400px;
+  height: 050px;
+  border: 1px solid #ccc;
+  overflow: auto; /* Enable scrolling */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--primary) var(--background);
+}
+
+Chrome, Edge, and Safari 
+ ::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--background);
+} 
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 10px;
+  border: 3px solid var(--background);
+}
+a:hover{
+  color : var(--secondary);
+}
 
 @media screen and (max-width: 800px) {
   #root {

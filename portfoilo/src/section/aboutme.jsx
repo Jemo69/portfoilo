@@ -11,14 +11,17 @@ function Aboutme() {
       id: 2,
       img: linkedin,
       name: "Linkedin",
-      link: "www.linkedin.com/in/ifeanyichukwu-nwachukwe-69bb751ba",
+      link: "https:/www.linkedin.com/in/ifeanyichukwu-nwachukwe-69bb751ba",
     },
     { id: 3, img: mail, name: "Mail", link: "mailto:jemolife69@gmail.com" },
   ];
 
   return (
     <div className="aboutme">
-      <Details />
+      <div className="detaildiv" >
+          <Details />
+      </div>
+
       <div className="socials">
         <h1 className="socialstext">my socials</h1>
         <div className="socialsdiv">

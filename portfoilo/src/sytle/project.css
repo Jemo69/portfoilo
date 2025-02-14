@@ -15,9 +15,14 @@
   padding: 20px;
   text-align: left;
 }
+.projectbtndiv{
+  padding: 15px 5px 15px;
+}
 .projectbtn {
   background-color: var(--secondary);
   border-radius: 5px;
+  padding: 10px;
+  margin: 250px 0 250px;
   text-align: center;
   color: var(--text);
   text-decoration: none; 
@@ -31,10 +36,12 @@
   font-size: 1rem;
   color: var(--text-100);
   padding: 10px auto;
+  margin: 15px 0 15px;
 }
 .projecttitle {
   color: var(--accent);
   font-size: 1.5rem;
+  padding: 15px 0 15px;
 }
 @media screen and (max-width: 900px) {
   .project {

@@ -11,7 +11,7 @@ function Details() {
           <h1 className="there">There</h1>
         </div>
         <p className="bio">
-          Hi l'm Jeremy a nigerian and computer science student my main focus is
+          Hi l'm Jeremy (aka Jemo) a nigerian and computer science student my main focus is
           using programming to fix problem
         </p>
       </div>

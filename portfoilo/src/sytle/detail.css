@@ -38,6 +38,17 @@
     box-shadow: var(--text) 10px 10px 100px 10px;
     animation: box 5s ease-in-out infinite;
 }
+@keyframes slideIn {
+    form{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to{ 
+        opacity: 1;
+        transform: translateX(0);
+        
+    }
+}
 @keyframes box {
     0%{
         box-shadow: 10px 10px 100px 10px var(--text);
