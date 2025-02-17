@@ -28,7 +28,21 @@
 .title{
   transform: translate(-20%, -50%)  rotate(340deg);
   color: var(--background);
-
+  scale: 1.2;
+  animation: scalingup  3s ease-in infinite;
+}
+@keyframes scalingup {
+   0%{
+    scale: 1.2;
+   }  
+   50%{
+    scale: 0.5;
+    opacity: 0;
+   }
+   100%{
+    scale: 1.2;
+   }
+  
 }
 .quote{
   color: var(--accent);
@@ -46,8 +60,28 @@
 @media only screen and (max-width: 800px) {
   .title{
     transform: translate(-40%, -50%)  rotate(340deg);
+    scale: 0.8;
+    animation: scalingup  9s ease-in infinite;
+  }
+  @keyframes scalingup {
+    0%{
+      scale: 0.8;
+    }
+    50%{
+      scale: 0.6;
+      opacity: 0;
+    }
+    100%{
+      scale: 0.8;
+    }
+    
   }
   .port{
     transform: translate(10%, -50%)  ;
+    font-size:2.5rem;
+  }
+  .details{
+    min-width: 100dvw;
+    overflow-x: hidden;
   }
 }

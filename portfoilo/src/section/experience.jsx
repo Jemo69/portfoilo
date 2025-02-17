@@ -5,6 +5,7 @@ import javascript from "../assets/javascript.svg";
 import html from "../assets/html-5.svg";
 import css from "../assets/css3.svg";
 import "../sytle/experience.css";
+import react from '../assets/react.svg'
 function Experience() {
   const projects = [
     {
@@ -17,13 +18,14 @@ function Experience() {
   const langs = [
     { id: 1, name: "python", img: python },
     { id: 2, name: "javascript", img: javascript },
-    { id: 3, name: "html", img: html },
-    { id: 4, name: "css", img: css },
+    { id: 3, name: "html/css", img: html },
+    { id: 4,  name: "React" , img : react },
   ];
+
   return (
     <div className="experience">
       <div className="languagediv">
-        <h1 className="socialstext">My Languages</h1>
+        <h1 className="socialstext">My Techncals skill</h1>
         <div className="lang">
           {langs.map((lang) => (
             <Language lang={lang} key={lang.id} />

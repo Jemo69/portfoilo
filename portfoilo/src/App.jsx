@@ -1,17 +1,18 @@
 import './sytle/App.css'
-import Socials from './component/socials'
-import Details from './component/details'
 import Combined from './page/combine'
-import Project from './component/project'
-import Language from './component/language'
-import python from './assets/python.svg'
-import javascript from './assets/javascript.svg'
-
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Blog from './page/aboutme'; 
+import NavBar from './component/navbar';
 function App() {
   return (
-    <>
-      <Combined/>
-    </>   
+   <BrowserRouter>
+      <div className='navbardiv'>
+        <NavBar/>
+      </div> 
+      <Routes>
+        <Route path='/' element={<Combined/>}/>
+      </Routes>
+   </BrowserRouter> 
   )
 }
 

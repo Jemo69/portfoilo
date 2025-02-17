@@ -1,0 +1,32 @@
+img {
+  width: 50px;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  max-width: 95dvw;
+  border: var(--secondary) solid 1px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0;
+  background-color: var(--primary);
+  padding: 5px;
+}
+.navbarstart {
+  margin-right: auto;
+}
+.navbarend {
+  margin-left: auto;
+}
+.link {
+  padding: 10px;
+}
+.logo {
+  border-radius: 50%;
+}
+@media only screen and (max-width: 900px) {
+  .navbar {
+    min-width: 100dvw;
+  }
+}

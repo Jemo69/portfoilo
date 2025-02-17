@@ -5,16 +5,22 @@
   --secondary: #9c0230;
   --accent: #fb5c18;
 }
-.lang, .jemo {
+
+.jemo, .lang {
+  margin: 0;
+  padding: 0;
+  display: grid ;
+  grid-template-columns: auto auto auto ;
+
+}
+.details{
+  max-width: 1000px;
+  min-width: 0;
+}
+.jemodiv{
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
-  max-width: 500px;
-  padding: 40px 20px;
-  box-sizing: border-box;
+  justify-content: center; 
+ flex-direction: column;
 }
 .socialstext {
   color: var(--accent);
@@ -28,24 +34,45 @@
   flex-direction: column;
   background-color: var(--background);
   color: var(--text);
-  padding: 150px;
 }
-@media screen and (max-width: 900px) {
-  .lang, .jemo {
-    flex-direction: column;
-    gap: 2rem;
+@media screen and (min-width:501px)and (max-width: 900px) {
+  
+  .jemo,.lang{
+    grid-template-columns: auto auto;
   }
   .socialstext {
     font-size: 14px;
   }
 }
-@media screen and (min-width: 900px) and (max-width: 1440px) {
-  .lang, .jemo {
+@media screen and (min-width: 901px) and (max-width: 1440px) {
+  .lang {
     display: flex;
     flex-direction: row;
     gap: 1rem;
   }
+  .jemo{
+    grid-template-columns: auto auto;
+  }
   .socialstext {
     font-size: 14px;
   }
 }
+@-moz-document url-prefix(){
+  .lang{
+  }
+  @media screen and (max-width:500px) {
+    .lang{
+      padding: 20px 20px 20px ;
+    }
+   .jemo{
+        
+   transform: translate(0020%);
+   } 
+  }
+}
+@media screen and (max-width:500px){
+  .jemo,.lang{
+    grid-template-columns: auto;
+    margin:0 0000px 60px;
+  }
+  }

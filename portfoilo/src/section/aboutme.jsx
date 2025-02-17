@@ -3,7 +3,10 @@ import Socials from "../component/socials";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import mail from "../assets/mail.png";
+import react from "../assets/react.svg";
 import "../sytle/aboutme.css";
+import FadeInOverlay from "../component/animatmatedsection";
+import ScrollAnimation from "react-animate-on-scroll";
 function Aboutme() {
   const medias = [
     { id: 1, img: github, name: "Github", link: "https://github.com/Jemo69" },
@@ -18,17 +21,26 @@ function Aboutme() {
 
   return (
     <div className="aboutme">
-      <div className="detaildiv" >
+      <div className="">
+        <ScrollAnimation
+          animateIn="fadeIn"
+          duration={100}
+          animateOut="flipOutY"
+          initiallyVisible={true}
+        >
           <Details />
+        </ScrollAnimation>
       </div>
 
       <div className="socials">
         <h1 className="socialstext">my socials</h1>
-        <div className="socialsdiv">
-          {medias.map((media) => (
-            <Socials media={media} key={media.id} />
-          ))}
-        </div>
+        <ScrollAnimation animateIn="bounceInRight" duration={50}>
+          <div className="socialsdiv">
+            {medias.map((media) => (
+              <Socials media={media} key={media.id} />
+            ))}
+          </div>
+        </ScrollAnimation>
       </div>
     </div>
   );

@@ -1,6 +1,12 @@
 #root {
   max-width: 100dvw;
   text-align: center;
+  font-family: Inter;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+}
+a{
+  text-decoration: none;
 }
 .scrollable-container {
   width: 400px;
@@ -16,6 +22,11 @@
 * {
   scrollbar-width: auto;
   scrollbar-color: var(--primary) var(--background);
+}
+@font-face{
+  font-family: 'Inter';
+  src: url('./RammettoOne.woff');
+
 }
 
 Chrome, Edge, and Safari 
@@ -36,11 +47,16 @@ a:hover{
   color : var(--secondary);
 }
 
+.navbardiv{
+  position: sticky;
+  top: 0;
+}
 @media screen and (max-width: 800px) {
   #root {
     overflow-x: hidden;
-    max-width: 100dvw;
-    padding: 10px;
+    min-width: 100dvw;
+    display: flex;
+    flex-wrap: wrap;
     background-color: var(--background);
   }
 }

@@ -12,7 +12,7 @@ function Details() {
         </div>
         <p className="bio">
           Hi l'm Jeremy (aka Jemo) a nigerian and computer science student my main focus is
-          using programming to fix problem
+          using programming to fix problem
         </p>
       </div>
     </div>

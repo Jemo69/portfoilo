@@ -44,10 +44,10 @@ margin-top: 100px;
   }
 }
 .detaildiv{
-      view-timeline-name: --item-timeline;
-      animation: slide-fade-in both ;
-      animation-timeline:  --item-timeline;
-      animation-range: contain 0% contain 50%;
+  align-items: center;
+  padding: 0;
+  justify-content: center;
+  margin: 0 auto 0;
 }
 
 
@@ -61,4 +61,11 @@ margin-top: 100px;
   .socialstext {
     font-size: 14px;
   }
+}
+@media screen and (max-width: 500px){
+     .detaildiv{
+      width: 500px;
+      margin: 0 300px 0;
+     }
+
 }

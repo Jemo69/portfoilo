@@ -7,7 +7,7 @@ function Project({ project }) {
       <p className="projectstack">project stack: {project.techstack}</p>
       <p className="projectbtndiv">
         <a href={project.link} className="projectbtn">
-          See the code
+          More Details
         </a>
       </p>
     </div>
