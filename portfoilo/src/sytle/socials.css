@@ -23,3 +23,9 @@
   color: var(--accent);
   padding: 0 5px 0;
 }
+
+@media screen and (orientation: landscape) and (min-width: 500px) and (max-width: 1044px) {
+.socialdiv{
+  padding: 2px;
+}
+}

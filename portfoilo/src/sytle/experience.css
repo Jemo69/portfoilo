@@ -58,8 +58,6 @@
   }
 }
 @-moz-document url-prefix(){
-  .lang{
-  }
   @media screen and (max-width:500px) {
     .lang{
       padding: 20px 20px 20px ;
@@ -76,3 +74,13 @@
     margin:0 0000px 60px;
   }
   }
+
+@media screen and (orientation: landscape) and (min-width: 500px) and (max-width: 1044px) {
+  .socialsdiv{
+    display: flex;
+    flex-direction: row;
+  }
+  .jemo,.lang{
+    grid-template-columns: auto auto;
+  }
+}
