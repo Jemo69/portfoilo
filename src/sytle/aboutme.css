@@ -1,0 +1,71 @@
+:root {
+  --text: #dbdcff;
+  --background: #111231;
+  --primary: #50213e;
+  --secondary: #9c0230;
+  --accent: #fb5c18;
+}
+.socialsdiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 5rem;
+  margin-top: 100px;
+  width: 100%;
+  padding: 0 20px;
+}
+.socials{
+margin-top: 100px;
+}
+.aboutme {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--text);
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+@keyframes slide-fade-in{
+  from{
+    opacity: 0;
+    transform: translateY(5dvh);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(5dvh)
+    
+  }
+}
+.detaildiv{
+  align-items: center;
+  padding: 0;
+  justify-content: center;
+  margin: 0 auto 0;
+}
+
+
+@media screen and (max-width: 800px) {
+  .socialsdiv {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 30px;
+  }
+  .socialstext {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px){
+     .detaildiv{
+      width: 500px;
+      margin: 0 300px 0;
+     }
+
+}

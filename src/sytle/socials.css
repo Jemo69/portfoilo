@@ -1,0 +1,31 @@
+:root {
+  --text: #dbdcff;
+  --background: #111231;
+  --primary: #50213e;
+  --secondary: #9c0230;
+  --accent: #fb5c18;
+}
+.socialimg {
+  width: 50px;
+  height: 50px;
+}
+.socialdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 200px;
+  background-color: var(--primary);
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 5px var(--text));
+}
+.socialname {
+  color: var(--accent);
+  padding: 0 5px 0;
+}
+
+@media screen and (orientation: landscape) and (min-width: 500px) and (max-width: 1044px) {
+.socialdiv{
+  padding: 2px;
+}
+}

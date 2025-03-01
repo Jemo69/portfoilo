@@ -1,0 +1,38 @@
+:root{
+    --text: #dbdcff;
+    --background: #111231;
+    --primary: #50213e;
+    --secondary: #9c0230;
+    --accent: #fb5c18;
+  }
+.langdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0 15px;
+    width: 400px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 5px var(--text));
+    margin: 5px 10px 20px ;
+ 
+}
+@-moz-document url-prefix(){
+    .langdiv{
+        margin: 15px 15px 15px;
+    } 
+}
+.longimg{
+    width: 50px;
+    height: 50px;
+}
+.langname{
+    color: var(--accent);
+    padding: 0 5px 0;
+}
+@media screen and (max-width:1440px) {
+    .langdiv{
+        width: 200px;
+        padding: 10px 5px 10px;
+    }
+}

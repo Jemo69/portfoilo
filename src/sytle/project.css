@@ -1,0 +1,57 @@
+:root {
+  --text-100: #9e9ea3;
+  --text: #dbdcff;
+  --background: #111231;
+  --primary: #50213e;
+  --secondary: #9c0230;
+  --accent: #fb5c18;
+}
+.project {
+  width: 490px;
+  height: 300px;
+  background-color: var(--primary);
+  border-radius: 10px;
+  margin: 05px;
+  padding: 20px;
+  text-align: left;
+}
+.projectbtndiv{
+  padding: 15px 5px 15px;
+}
+.projectbtn {
+  background-color: var(--secondary);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 250px 0 250px;
+  text-align: center;
+  color: var(--text);
+  text-decoration: none; 
+  cursor: pointer;
+}
+.projectbtn:hover {
+  background-color: var(--accent);
+  color: var(--background);
+}
+.projectstack {
+  font-size: 1rem;
+  color: var(--text-100);
+  padding: 10px auto;
+  margin: 15px 0 15px;
+}
+.projecttitle {
+  color: var(--accent);
+  font-size: 1.5rem;
+  padding: 15px 0 15px;
+}
+@media screen and (max-width: 900px) {
+  .project {
+    width: 300px;
+    padding: 15px;
+  }
+  .projectstack {
+    font-size: 0.9rem;
+  }
+  .projecttitle {
+    font-size: 1.2rem;
+  }
+}

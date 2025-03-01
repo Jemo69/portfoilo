@@ -1,0 +1,194 @@
+:root {
+  --text: #dbdcff;
+  --background: #111231;
+  --primary: #50213e;
+  --secondary: #9c0230;
+  --accent: #fb5c18;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./RammettoOne.woff2");
+}
+
+.jemopic {
+  aspect-ratio: 3/2;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+}
+.there {
+  color: var(--accent);
+  font-family: Inter;
+}
+.hello {
+  color: var(--secondary);
+  font-family: Inter;
+}
+.details {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: row;
+  color: var(--text);
+  width: 1000px;
+  height: 500px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: var(--text) 10px 10px 100px 10px;
+  animation: box 5s ease-in-out infinite;
+}
+@keyframes slideIn {
+  form {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes box {
+  0% {
+    box-shadow: 10px 10px 100px 10px var(--text);
+  }
+  25% {
+    box-shadow: 10px 10px 100px 10px var(--primary);
+  }
+  50% {
+    box-shadow: 10px 10px 100px 10px var(--accent);
+  }
+  75% {
+    box-shadow: 10px 10px 100px 10px var(--primary);
+  }
+  100% {
+    box-shadow: 10px 10px 100px 10px var(--text);
+  }
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+.content {
+  padding: 50px;
+}
+.bio {
+  padding: 5px;
+  display: flex;
+  justify-content: left;
+  color: var(--text);
+  text-align: left;
+}
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .details {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    height: 600px;
+    align-items: center;
+    width: 500px;
+    padding: 0;
+    font-size: 9px;
+    padding: 5px;
+  }
+  .jemopic {
+    width: 200px;
+    height: 200px;
+  }
+  .hello,
+  .there {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1440px) {
+  .details {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 500px;
+    align-items: center;
+    padding: 10px;
+  }
+  .jemopic {
+    width: 300px;
+    height: 300px;
+  }
+  .hello,
+  .there {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .details {
+    overflow-x: hidden;
+    height: 80%;
+    width: 300px;
+    background-color: var(--background);
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    justify-content: center;
+    margin: 0 auto 0;
+  }
+
+  .bio {
+    padding: 0;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .jemopic {
+    width: 60%;
+    height: 216px;
+    border-radius: 50%;
+    padding: 1px;
+  }
+  .content {
+    padding: 10px;
+    font-size: 10px;
+    text-align: center;
+  }
+  .header {
+    padding: 0px;
+    font-size: 0.75rem;
+  }
+  @keyframes box {
+    0% {
+      box-shadow: 1px 1px 15px 1px var(--text);
+    }
+    25% {
+      box-shadow: 1px 1px 15px 1px var(--primary);
+    }
+    50% {
+      box-shadow: 1px 1px 15px 1px var(--accent);
+    }
+    75% {
+      box-shadow: 1px 1px 15px 1px var(--primary);
+    }
+    100% {
+      box-shadow: 1px 1px 15px var(--text);
+    }
+  }
+}
+@-moz-document url-prefix() {
+  @media screen and (max-width: 500px) {
+    .bio {
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 500px) and (max-width: 1044px) {
+  .details {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+  }
+  .bio {
+    font-size: 0.7rem;
+  }
+  .content {
+    padding-left: 5px;
+  }
+}

@@ -1,0 +1,86 @@
+:root{
+  --text: #dbdcff;
+  --background: #111231;
+  --primary: #50213e;
+  --secondary: #9c0230;
+  --accent: #fb5c18;
+}
+
+.jemo, .lang {
+  margin: 0;
+  padding: 0;
+  display: grid ;
+  grid-template-columns: auto auto auto ;
+
+}
+.details{
+  max-width: 1000px;
+  min-width: 0;
+}
+.jemodiv{
+  display: flex;
+  justify-content: center; 
+ flex-direction: column;
+}
+.socialstext {
+  color: var(--accent);
+}
+.experience {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--text);
+}
+@media screen and (min-width:501px)and (max-width: 900px) {
+  
+  .jemo,.lang{
+    grid-template-columns: auto auto;
+  }
+  .socialstext {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1440px) {
+  .lang {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .jemo{
+    grid-template-columns: auto auto;
+  }
+  .socialstext {
+    font-size: 14px;
+  }
+}
+@-moz-document url-prefix(){
+  @media screen and (max-width:500px) {
+    .lang{
+      padding: 20px 20px 20px ;
+    }
+   .jemo{
+        
+   transform: translate(0020%);
+   } 
+  }
+}
+@media screen and (max-width:500px){
+  .jemo,.lang{
+    grid-template-columns: auto;
+    margin:0 0000px 60px;
+  }
+  }
+
+@media screen and (orientation: landscape) and (min-width: 500px) and (max-width: 1044px) {
+  .socialsdiv{
+    display: flex;
+    flex-direction: row;
+  }
+  .jemo,.lang{
+    grid-template-columns: auto auto;
+  }
+}
