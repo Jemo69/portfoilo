@@ -32,14 +32,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20" # Or your preferred Node.js version
-          cache: "bun" # Caches bun dependencies
 
       - name: Install dependencies
-        run: bun install
+        run: npm install
 
       - name: Build with Vite
         run:
-          bun run build
+          npm run build
           # If your GitHub Pages URL is like username.github.io/repo-name/,
           # you'll need to set the `base` option in your vite.config.ts/js.
           # For example, if your repository is `my-vite-app`, the base would be `/my-vite-app/`
