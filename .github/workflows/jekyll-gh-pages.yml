@@ -1,5 +1,4 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy Vite React App to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -28,15 +27,35 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          source: ./
-          destination: ./_site
+          node-version: "20" # Or your preferred Node.js version
+          cache: "bun" # Caches bun dependencies
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build with Vite
+        run:
+          bun run build
+          # If your GitHub Pages URL is like username.github.io/repo-name/,
+          # you'll need to set the `base` option in your vite.config.ts/js.
+          # For example, if your repository is `my-vite-app`, the base would be `/my-vite-app/`
+          # This is CRUCIAL for correct asset loading and routing.
+          # Example vite.config.ts:
+          # import { defineConfig } from 'vite';
+          # import react from '@vitejs/plugin-react';
+          # export default defineConfig({
+          #   plugins: [react()],
+          #   base: '/YOUR_REPOSITORY_NAME/', // <--- IMPORTANT! Replace with your repo name
+          # });
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist # Vite by default outputs to the 'dist' directory
 
   # Deployment job
   deploy:
